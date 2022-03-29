@@ -37,7 +37,10 @@ namespace Calculadora
                         Multiplicacao();
                         break;
                     case Menu.Potencia:
-                        Potencia();
+                        Pot();
+                        break;
+                    case Menu.Raiz:
+                        Raiz();
                         break;
                     case Menu.Sair:
                         escolheSair = true;
@@ -101,14 +104,28 @@ namespace Calculadora
             Console.ReadLine();
         }
         // Potência
-        static void Potencia()
+        static void Pot()
         {
             Console.WriteLine("Potência de um numero: ");
             Console.WriteLine("Digite a base: ");
             int a = int.Parse(Console.ReadLine());
             Console.WriteLine("Digite o expoente: ");
             int b = int.Parse(Console.ReadLine());
-            int resultado = Pow(a, b);
+            int resultado = (int)Math.Pow(a, b);
+            // FLOAT -> 6~9 Digitos | 4 Bytes
+            // DOUBLE -> 15~17 Digitos | 8 Bytes
+            // DECIMAL -> 28~29 Digitos | 16 Bytes
+            Console.WriteLine($"O resultado é: {resultado}");
+            Console.WriteLine("Aperte ENTER para voltar para o menu");
+            Console.ReadLine();
+        }
+        // Raiz
+        static void Raiz()
+        {
+            Console.WriteLine("Raiz de um numero: ");
+            Console.WriteLine("Digite o numero:: ");
+            int a = int.Parse(Console.ReadLine());
+            double resultado = Math.Sqrt(a);
             Console.WriteLine($"O resultado é: {resultado}");
             Console.WriteLine("Aperte ENTER para voltar para o menu");
             Console.ReadLine();
