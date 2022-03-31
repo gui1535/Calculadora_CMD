@@ -9,6 +9,7 @@ namespace Calculadora
     internal class Program
     {
         enum Menu { Soma=1, Subtracao=2, Divisao=3, Multiplicacao=4, Potencia=5, Raiz=6, Sair=7 }
+        
         static void Main(string[] args)
         {
             bool escolheSair = false;
@@ -19,7 +20,6 @@ namespace Calculadora
                 Console.WriteLine(" 1 - Soma \n 2 - Subtração \n 3 - Divisão \n 4 - Multiplicação \n 5 - Potência \n 6 - Raiz \n 7 - Sair");
 
                 // Uma variavel do tipo Menu, chamada de opcao, é convertida para um numero do tipo Menu
-                
                 Menu opcao = (Menu)int.Parse(Console.ReadLine());
 
                 switch (opcao)
@@ -51,6 +51,7 @@ namespace Calculadora
 
             }
         }
+        
         // SOMA
         static void Soma()
         {
@@ -64,6 +65,7 @@ namespace Calculadora
             Console.WriteLine("Aperte ENTER para voltar para o menu");
             Console.ReadLine();
         }
+        
         // Subtração
         static void Subtracao()
         {
@@ -77,6 +79,7 @@ namespace Calculadora
             Console.WriteLine("Aperte ENTER para voltar para o menu");
             Console.ReadLine();
         }
+        
         // Divisão
         static void Divisao()
         {
@@ -90,6 +93,7 @@ namespace Calculadora
             Console.WriteLine("Aperte ENTER para voltar para o menu");
             Console.ReadLine();
         }
+        
         // Multiplicação
         static void Multiplicacao()
         {
@@ -103,6 +107,7 @@ namespace Calculadora
             Console.WriteLine("Aperte ENTER para voltar para o menu");
             Console.ReadLine();
         }
+        
         // Potência
         static void Pot()
         {
@@ -119,6 +124,7 @@ namespace Calculadora
             Console.WriteLine("Aperte ENTER para voltar para o menu");
             Console.ReadLine();
         }
+        
         // Raiz
         static void Raiz()
         {
